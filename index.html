@@ -1,16 +1,68 @@
 <!DOCTYPE html>
-<html>
-<head lang="uk">
-    <meta charset="UTF-8">
-    <title>My Page</title>
-
-
-    <link rel="stylesheet" type="text/css" href="main.css" />
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="main.css">
+	<title>Document</title>
 </head>
 <body>
-	<span class="product-item">
-		Apple
-		<span class="amount">4</span>
-	</span>
+	<section class="container">
+		<div class="container-sm control">
+			<div class="add-field subcontainer">
+				<input type="text" placeholder="Назва товару" class="add-field-input">
+				<button data-tooltip="Додати товар" class="add-field-button">Додати</button>
+			</div>
+			<div class="product subcontainer">
+				<h3 class="product-title bought">Помідори</h3>
+				<div class="amount-control">
+					<div class="amount fixed">2</div>
+				</div>
+				<div class="product-control">
+					<button data-tooltip="Видалити з куплених" class="product-control-btn">Не куплено</button>
+				</div>
+			</div>
+			<div class="product subcontainer">
+				<h3 class="product-title">Печиво</h3>
+				<div class="amount-control">
+					<button data-tooltip="Збільшити кількість" class="amount-control-btn amount-dec">-</button>
+					<div class="amount">2</div>
+					<button data-tooltip="Зменшити кількість" class="amount-control-btn amount-inc">+</button>
+				</div>
+				<div class="product-control">
+					<button data-tooltip="Позначити як куплене" class="product-control-btn">Куплено</button>
+					<button data-tooltip="Видалити товар" class="product-remove-btn">✖</button>
+				</div>
+			</div>
+			<div class="product subcontainer">
+				<input type="text" value="Сир" class="product-title-edit">
+				<div class="amount-control">
+					<button data-tooltip="Збільшити кількість" class="amount-control-btn amount-dec disabled">-</button>
+					<div class="amount">2</div>
+					<button data-tooltip="Зменшити кількість" class="amount-control-btn amount-inc">+</button>
+				</div>
+				<div class="product-control">
+					<button data-tooltip="Позначити як куплене" class="product-control-btn">Куплено</button>
+					<button data-tooltip="Видалити товар" class="product-remove-btn">✖</button>
+				</div>
+			</div>
+		</div>
+		<div class="container-sm data">
+			<h1 class="data-container data-title remains-title">Залишилося</h1>
+			<div class="data-container remains-container">
+				<div class="item">Печиво <div class="item-badge">2</div></div>
+				<div class="item">Сир <div class="item-badge">2</div></div>
+			</div>
+			<h1 class="data-container data-title">Куплено</h1>
+			<div class="data-container bought-container">
+				<div class="item bought">Помідори <div class="item-badge">2</div></div>
+			</div>
+		</div>
+	</section>
+	<div class="badge">
+		<h1 class="badge-title">Buy List</h1>
+		<p class="created-by">Created by:</p>
+		<h3 class="author">Oleksandr Hnutov</h3>
+	</div>
 </body>
 </html>
