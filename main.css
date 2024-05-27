@@ -295,6 +295,14 @@ body {
     border: none;
 }
 
+.amount-inc.disabled:hover {
+	background-color: #00B849;
+}
+
+.amount-dec.disabled:hover {
+	background-color: #EC0021;
+}
+
 .item {
     background-color: #E7E7E7;
     color: #5F5f5F;
