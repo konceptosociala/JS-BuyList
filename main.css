@@ -13,6 +13,7 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
+    align-items: flex-start;
 }
 
 .container-sm {
@@ -30,7 +31,7 @@ body {
 
 .data {
     width: 33.333%;
-    max-width: 1200px;
+    /* max-width: 1200px; */
 }
 
 .subcontainer {
@@ -83,6 +84,7 @@ body {
     margin-right: auto;
     width: 15%;
     font-weight: normal;
+    text-overflow: ellipsis;
 }
 
 .bought {
@@ -113,7 +115,7 @@ body {
     color: whitesmoke;
     border-radius: 50%;
     border: none;
-    border-bottom: 5px solid #a9a9a9;
+    box-shadow: 0 1px 0 #a9a9a9, 0 2px 0 #a9a9a9, 0 3px 0 #a9a9a9, 0 4px 0 #a9a9a9, 0 5px 0 #a9a9a9;
     transition: all .1s;
     cursor: pointer;
 }
@@ -125,7 +127,7 @@ body {
 
 .amount-dec {
     background-color: #EC0021;
-    border-color: #CE0024;
+    box-shadow: 0 1px 0 #CE0024, 0 2px 0 #CE0024, 0 3px 0 #CE0024, 0 4px 0 #CE0024, 0 5px 0 #CE0024;
 }
 
 .amount-dec:hover {
@@ -134,12 +136,13 @@ body {
 
 .amount-dec:active {
     background-color: #CE0024;
-    border: none;
+    box-shadow: none;
+    transform: translateY(5px);
 }
 
 .amount-inc {
     background-color: #00D14F;
-    border-color: #00B849;
+    box-shadow: 0 1px 0 #00B849, 0 2px 0 #00B849, 0 3px 0 #00B849, 0 4px 0 #00B849, 0 5px 0 #00B849;
 }
 
 .amount-inc:hover {
@@ -148,7 +151,8 @@ body {
 
 .amount-inc:active {
     background-color: #00B849;
-    border: none;
+    box-shadow: none;
+    transform: translateY(5px);
 }
 
 .amount {
@@ -280,11 +284,14 @@ body {
 
 .data-container {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    padding: 20px;
     padding-left: 30px;
     height: 100%;
     border-bottom: 1px solid #a9a9a9;
     gap: 10px;
+    min-height: 100px;
 }
 
 .data-title {
@@ -297,10 +304,20 @@ body {
 
 .amount-inc.disabled:hover {
 	background-color: #00B849;
+    box-shadow: 0 1px 0 #00B849, 0 2px 0 #00B849, 0 3px 0 #00B849, 0 4px 0 #00B849, 0 5px 0 #00B849;
 }
 
 .amount-dec.disabled:hover {
 	background-color: #EC0021;
+    box-shadow: 0 1px 0 #CE0024, 0 2px 0 #CE0024, 0 3px 0 #CE0024, 0 4px 0 #CE0024, 0 5px 0 #CE0024;
+}
+
+.amount-inc.disabled:active {
+	transform: none;
+}
+
+.amount-dec.disabled:active {
+	transform: none;
 }
 
 .item {
@@ -321,17 +338,11 @@ body {
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    border-radius: 50%;
+    border-radius: 15px;
     background-color: #FF6017;
 }
 
-@media screen and (max-width: 1000px) {
-	.amount-control {
-		flex-direction: column;
-	}
-}
-
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1200px) {
     .container {
         flex-wrap: wrap;
     }
